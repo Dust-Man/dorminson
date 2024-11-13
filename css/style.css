@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Pixels&display=swap');
+:root{
+    --dark-color:#191919;
+    --light-color: #f1f0ea;
+}
+*{
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body, html{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: var(--dark-color) ;
+    color: #f1f0ea;
+}
+header{
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    height: 10vh;
+}
+main{
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+section{
+    padding: 15px;
+    margin: 0 auto;
+}
+p{
+    color: var(--light-color);
+}
+
+
+
+.__logo{
+    height: 10vh;
+}
+.__title{
+    text-align: center;
+    font-size: 48px;
+    font-family: "Rubik Pixels", system-ui;
+    color: var(--light-color);
+}
+.hero{
+    height: 90vh;
+    width: 100%;
+    background-image: url("https://i.ibb.co/F8G8j2k/image.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+.hero__mask{
+    position: absolute;
+    z-index: 999;
+    height: 90vh;
+    background-color: rgba(25, 25, 25, 0.5); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    width: 100%;
+    overflow: hidden;
+}
+.hero__caption{
+    font-size: 30px;
+    text-align: center;
+}
+.main-button{
+    color: var(--light-color);
+    text-decoration: none;
+    padding: 5px;
+    background-color: var(--dark-color);
+    border: solid 2px var(--light-color);
+}
+
+.section-title{
+    text-align: center;
+    font-size: 40px;
+}
+.three-column-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+.grid__item{
+    border: solid 2px var(--light-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+.grid__image-container{
+    width: 300px;
+}
+.grid__image-container img{
+    width: 100%;
+    border-radius: 5px;
+}
+.grid__title{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 767px) {
+    .three-column-grid{
+        grid-template-columns: 1fr;
+    }
+    .grid__item{
+        margin: 0 auto;
+        width: 80%;
+    }
+    .grid__image-container{
+        width: 250px;
+    }
+}
